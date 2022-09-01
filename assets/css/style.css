@@ -1,10 +1,15 @@
+/*==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/*==================== VARIABLES CSS ====================*/
 :root {
     --header-height: 3rem;
 
-    --hue-color: 250;
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
+    /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -18,8 +23,10 @@
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
+    /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
 
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -28,11 +35,13 @@
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
+    /*========== Font weight ==========*/
     --font-medium: 500;
     --font-semi-bold: 600;
 
-    /*margenes bottom*/
-    --mb-0-25: -25rem;
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
     --mb-1: 1rem;
@@ -41,14 +50,13 @@
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
 
-    /*z index*/
-
+    /*========== z index ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
 }
 
-/*font size for large devices*/
+/* Font size for large devices */
 @media screen and (min-width: 968px) {
     :root {
         --big-font-size: 3rem;
@@ -61,84 +69,88 @@
     }
 }
 
-*{
+
+
+
+/*==================== BASE ====================*/
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-html {
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-
-body {
+  }
+  
+  body {
     margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
-}
-
-h1,h2,h3,h4 {
+  }
+  
+  h1, h2, h3, h4 {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
-}
-
-ul {
+  }
+  
+  ul {
     list-style: none;
-}
-
-a {
+  }
+  
+  a {
     text-decoration: none;
-}
-
-img {
+  }
+  
+  img {
     max-width: 100%;
     height: auto;
-}
-
+  }
+/*==================== REUSABLE CSS CLASSES ====================*/
 .section {
     padding: 2rem 0 4rem;
-}
-
-.section__title {
+  }
+  
+  .section__title {
     font-size: var(--h1-font-size);
-}
-
-.section__subtitle {
+    color: var(--title-color);
+  }
+  
+  .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-3);
-}
-
-.section__title,
-.section__subtitle {
+  }
+  
+  .section__title, 
+  .section__subtitle {
     text-align: center;
-}
+  }
 
-/*layout*/
-
+/*==================== LAYOUT ====================*/
 .container {
     max-width: 768px;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
-}
-
-.grid {
+  }
+  
+  .grid {
     display: grid;
     gap: 1.5rem;
-}
-
-.header {
+  }
+  
+  .header {
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
-}
-
-/*nav*/
+  }
+  
+  /*==================== NAV ====================*/
 
 .nav {
     max-width: 968px;
@@ -215,139 +227,68 @@ img {
     color: var(--first-color-alt);
 }
 
-/*show menu*/
+/* show menu */
 .show-menu {
     bottom: 0;
 }
 
 
+/* Active link */
 
 
+/* Change background header */
 
 
+/*==================== HOME ====================*/
 
 
+/*==================== BUTTONS ====================*/
 
 
+/*==================== ABOUT ====================*/
 
 
+/*==================== SKILLS ====================*/
 
 
+/*==================== QUALIFICATION ====================*/
 
 
+/*==================== SERVICES ====================*/
 
 
+/* Active Modal */
 
 
-/*
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Custom Properties, update these for your own design */
-/*
-:root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
-    
-    --fw-reg: 300;
-    --fw-bold: 900;
-    
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
-    
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-    
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
-}
-
-header {
-    display: flex;  
-    justify-content: space-between;
-    padding: 1em;
-}
-
-.logo {
-    max-width: 100px;
-}
-
-.nav {
-    position: fixed;
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-
-    transform: translateX(100%);
-    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-}
-
-.nav__list {
-    list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.nav__link {
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
-    text-decoration: none;
-}
-
-.nav__link:hover {
-    color: var(--clr-accent);
-}
-
-.nav-toggle {
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    z-index: 1000;
-}
-
-.hamburger {
-    display: block;
-    position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    background: var(--clr-accent);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: transform 250ms ease-in-out;
-}
+/*==================== PORTFOLIO ====================*/
 
 
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-}
+/*==================== PROJECT IN MIND ====================*/
 
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; }
+
+/*==================== TESTIMONIAL ====================*/
+
+
+/*==================== CONTACT ME ====================*/
+
+
+/*==================== FOOTER ====================*/
+
+
+/*========== SCROLL UP ==========*/
+
+
+/* Show scroll */
+
+
+/*========== SCROLL BAR ==========*/
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
